@@ -1,0 +1,37 @@
+1) TO check docker containers running:  
+    docker ps 
+        or 
+    docker ps -a  (-a: this will give all the containers information running or stopped)
+
+2) To run the container:
+    docker run <image-name>
+
+3) To Stop the running container:
+    docker stop <container-id or container-name>
+
+4) To remove the stopped container:
+    docker rm <container-id or container-name>
+
+5) To List the image:
+    docker images
+
+6) To remove the image:
+    docker rmi <image-name>  [Note: No container should be using this image]
+
+7) To pull the image:
+    docker pull <image-name> 
+    Example: docker pull ubuntu
+
+8) To run container and make it sleep for n seconds:
+    docker run <image-name> sleep n
+    Example: docker run ubuntu sleep 100
+
+9) To execute command on running container:
+    docker exec <container-name> cat <filename>
+
+10) To run docker container in background:
+    docker run -d <image-name>
+
+11) To run docker container in interactive mode:
+    docker run -it <image-name> <command> [where "i" is meant for interactive and "t" is meant for time to live]
+    Example: docker run -it ubuntu bash
