@@ -1,0 +1,8 @@
+With Docker, We can run services in a separate environment which means each service has its own libraries and dependencies.
+Docker Containers are isolated environments which has its own processes, mounts, network but has shared OS kernels (OS kernels: which are responsible with interaction with underlying hardware).
+
+Difference between Virtual Machine and Docker:
+  Virtual machines runs on hypervisor and hardware infrastructure which means multiple application runs with their own OS requirements in each separate virtual machine.
+  Docker : Docker runs on shared OS kernel and hardware infrastructure who task is to manage containers (which are isolated env which can run with their own set of libraries and other dependencies)
+  Virtual Machine: Is heavy, as multiple resources are being consumed (considering multiple applications are  running with their own OS and other requirements).
+  Docker: Is light weight and requires less time to load (as an application requires to load their libraries to run the application.)

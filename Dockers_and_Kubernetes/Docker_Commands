@@ -35,3 +35,5 @@
 11) To run docker container in interactive mode:
     docker run -it <image-name> <command> [where "i" is meant for interactive and "t" is meant for time to live]
     Example: docker run -it ubuntu bash
+
+12) Testing
