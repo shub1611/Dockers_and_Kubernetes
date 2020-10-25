@@ -39,3 +39,7 @@
 12) To mount the volume to docker(which means you can save the data outside the docker host, this will help when you want re-run the container with the same volume configuration)
     docker run -p <port-mapping> -v /you_home/<dir_name>:/var/<image-home> <image_name>
     Example: docker run -p 8080:8080 -v /home/shubham:/var/jenkins_home jenkins
+
+13) To get more information about docker container:
+    docker inspect <container-id>
+    Example: docker inspect <container-id>
