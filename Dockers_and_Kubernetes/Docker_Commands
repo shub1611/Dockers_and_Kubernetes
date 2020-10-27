@@ -43,3 +43,7 @@
 13) To get more information about docker container:
     docker inspect <container-id>
     Example: docker inspect <container-id>
+
+14) Build a docker image:
+    docker build <docker-file> -t <image-name>
+    Example: docker build dockerfile -t my-simple-app
