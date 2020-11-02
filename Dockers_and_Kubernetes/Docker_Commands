@@ -47,3 +47,13 @@
 14) Build a docker image:
     docker build <docker-file> -t <image-name>
     Example: docker build dockerfile -t my-simple-app
+
+15) Deploy image to private registry:
+    a) Start private registry container:
+        docker run -d 5000:5000 --name regsitry registery:2
+    b) Tag the image:
+        docker image tag my-image localhost:5000/my-image
+    c) Push the image:
+        docker push localhost:5000/my-image
+    d) Pull the image:
+        docker pull localhost:5000/my-image
