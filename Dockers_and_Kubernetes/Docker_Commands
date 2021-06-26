@@ -35,3 +35,25 @@
 11) To run docker container in interactive mode:
     docker run -it <image-name> <command> [where "i" is meant for interactive and "t" is meant for time to live]
     Example: docker run -it ubuntu bash
+
+12) To mount the volume to docker(which means you can save the data outside the docker host, this will help when you want re-run the container with the same volume configuration)
+    docker run -p <port-mapping> -v /you_home/<dir_name>:/var/<image-home> <image_name>
+    Example: docker run -p 8080:8080 -v /home/shubham:/var/jenkins_home jenkins
+
+13) To get more information about docker container:
+    docker inspect <container-id>
+    Example: docker inspect <container-id>
+
+14) Build a docker image:
+    docker build <docker-file> -t <image-name>
+    Example: docker build dockerfile -t my-simple-app
+
+15) Deploy image to private registry:
+    a) Start private registry container:
+        docker run -d 5000:5000 --name regsitry registery:2
+    b) Tag the image:
+        docker image tag my-image localhost:5000/my-image
+    c) Push the image:
+        docker push localhost:5000/my-image
+    d) Pull the image:
+        docker pull localhost:5000/my-image
